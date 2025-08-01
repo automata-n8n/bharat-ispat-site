@@ -204,8 +204,8 @@ class WebsiteTestSuite:
                 if f'href="{link}"' not in html_content:
                     missing_links.append(link)
             
-            # Check for mobile menu elements
-            mobile_elements = ['hamburger', 'nav-menu']
+            # Check for mobile menu elements (updated IDs)
+            mobile_elements = ['mobile-menu-btn', 'mobile-menu']
             missing_mobile = []
             
             for element in mobile_elements:
