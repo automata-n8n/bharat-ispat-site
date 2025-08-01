@@ -69,7 +69,7 @@ class WebsiteTestSuite:
                 ('id="services"', 'Services section'),
                 ('id="contact"', 'Contact section'),
                 ('<form', 'Contact form'),
-                ('script.js', 'JavaScript file reference')
+                ('<script>', 'JavaScript code')
             ]
             
             missing_elements = []
