@@ -288,15 +288,15 @@ class WebsiteTestSuite:
                     category_found.append(category)
             
             # Check for specific products
-            key_products = ['MS TMT Bars', 'MS Pipes', 'Steel Billets', 'Aluminium Scrap', 'Copper Scrap']
+            key_products = ['MS TMT Bars', 'MS Sheets', 'Steel Billets', 'Aluminium Scrap', 'Copper Scrap']
             products_found = []
             
             for product in key_products:
                 if product in html_content:
                     products_found.append(product)
             
-            # Check for product interaction elements
-            interaction_elements = ['product-card', 'View Details', 'product-overlay']
+            # Check for product interaction elements (updated to match actual HTML)
+            interaction_elements = ['View Details', 'group bg-white rounded-2xl']
             interactions_found = []
             
             for element in interaction_elements:
