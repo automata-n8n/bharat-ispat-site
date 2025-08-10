@@ -797,8 +797,9 @@
             }, 5000);
         }
         
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
+        // Enhanced performance optimization
+        let ticking = false;
+        function updateScrollEffects() {
             const navbar = document.querySelector('nav');
             if (window.scrollY > 100) {
                 navbar.classList.add('bg-white/98');
@@ -806,6 +807,15 @@
             } else {
                 navbar.classList.add('bg-white/95');
                 navbar.classList.remove('bg-white/98');
+            }
+            ticking = false;
+        }
+        
+        // Throttled scroll listener
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
             }
         });
         
