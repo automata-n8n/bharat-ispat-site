@@ -830,6 +830,14 @@
             animateElements.forEach(el => {
                 observer.observe(el);
             });
+            
+            // Add scroll-triggered animations
+            const statsElements = document.querySelectorAll('[class*="stat-item"]');
+            statsElements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animationDelay = `${index * 0.2}s`;
+                }, 100);
+            });
         });
     </script>
 </body>
